@@ -1,0 +1,22 @@
+{
+  "name": "desafio-bdd-pix",
+  "version": "1.0.0",
+  "description": "Exemplo de BDD para transferência PIX",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "keywords": [
+    "bdd",
+    "cucumber",
+    "testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.7"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.0.0"
+  }
+}
