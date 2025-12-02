@@ -15,6 +15,7 @@ Funcionalidade: Transferência PIX
 
   Cenário: Tentativa de transferência com saldo insuficiente
     Dado que meu saldo atual é de R$ 50,00
+    E que existe um destinatário com a chave PIX "loja@email.com"
     Quando eu tento transferir R$ 100,00 para a chave "loja@email.com"
     Então o sistema deve bloquear a transação
     E deve exibir a mensagem de erro "Saldo insuficiente"

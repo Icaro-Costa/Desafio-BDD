@@ -1,0 +1,302 @@
+[
+  {
+    "description": "  Como um correntista do banco digital,\n  Eu quero realizar transferências instantâneas via PIX,\n  Para que eu possa enviar dinheiro para outras pessoas ou pagar serviços rapidamente a qualquer hora do dia.",
+    "elements": [
+      {
+        "description": "",
+        "id": "transferência-pix;transferência-realizada-com-sucesso",
+        "keyword": "Cenário",
+        "line": 8,
+        "name": "Transferência realizada com sucesso",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 88290
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que meu saldo atual é de R$ 1000,00",
+            "match": {
+              "location": "tests/step_definitions.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 73082
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "que existe um destinatário com a chave PIX \"joao@email.com\"",
+            "match": {
+              "location": "tests/step_definitions.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39583
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 11,
+            "name": "eu confirmo uma transferência de R$ 200,00 para a chave \"joao@email.com\"",
+            "match": {
+              "location": "tests/step_definitions.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 12,
+            "name": "a transferência deve ser processada com sucesso",
+            "match": {
+              "location": "tests/step_definitions.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 160042
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 13,
+            "name": "meu saldo atualizado deve ser R$ 800,00",
+            "match": {
+              "location": "tests/step_definitions.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 55416
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 14,
+            "name": "o extrato deve registrar uma saída de R$ 200,00",
+            "match": {
+              "location": "tests/step_definitions.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33582
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7708
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "transferência-pix;tentativa-de-transferência-com-saldo-insuficiente",
+        "keyword": "Cenário",
+        "line": 16,
+        "name": "Tentativa de transferência com saldo insuficiente",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 17,
+            "name": "que meu saldo atual é de R$ 50,00",
+            "match": {
+              "location": "tests/step_definitions.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13167
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 18,
+            "name": "que existe um destinatário com a chave PIX \"loja@email.com\"",
+            "match": {
+              "location": "tests/step_definitions.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 19,
+            "name": "eu tento transferir R$ 100,00 para a chave \"loja@email.com\"",
+            "match": {
+              "location": "tests/step_definitions.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31292
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 20,
+            "name": "o sistema deve bloquear a transação",
+            "match": {
+              "location": "tests/step_definitions.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 21,
+            "name": "deve exibir a mensagem de erro \"Saldo insuficiente\"",
+            "match": {
+              "location": "tests/step_definitions.js:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 22,
+            "name": "meu saldo deve permanecer R$ 50,00",
+            "match": {
+              "location": "tests/step_definitions.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19749
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3792
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "transferência-pix;transferência-para-chave-inexistente",
+        "keyword": "Cenário",
+        "line": 24,
+        "name": "Transferência para chave inexistente",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 25,
+            "name": "que meu saldo atual é de R$ 500,00",
+            "match": {
+              "location": "tests/step_definitions.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 26,
+            "name": "eu tento transferir R$ 50,00 para a chave \"chave_inexistente@banco.com\"",
+            "match": {
+              "location": "tests/step_definitions.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10457
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 27,
+            "name": "o sistema deve notificar que a chave não foi encontrada",
+            "match": {
+              "location": "tests/step_definitions.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 28,
+            "name": "nenhuma alteração deve ser feita no meu saldo",
+            "match": {
+              "location": "tests/step_definitions.js:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6666
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2375
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "transferência-pix",
+    "line": 2,
+    "keyword": "Funcionalidade",
+    "name": "Transferência PIX",
+    "tags": [],
+    "uri": "features/transferencia_pix.feature"
+  }
+]
